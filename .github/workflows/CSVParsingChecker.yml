@@ -1,0 +1,18 @@
+name: CSVParsingChecker
+  
+on: push
+  
+jobs: 
+ CSVParseCheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: setup JDK
+        uses: actions/setup-java@v1
+        with: 
+          java-version: 1.8
+        
+      - name: compiler testcase 1
+        run: javac CSVParsingTest.java
+      - name: run testcase 1
+        run: java CSVParsingTest
