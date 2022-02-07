@@ -14,7 +14,7 @@ jobs:
       - name: maven build
         run: mvn -B package --file pom.xml
       - name: compileCSVParser
-        run: javac CSVParsing.java
+        run: javac main/java/CSVParsing.java
       - name: Compile ReadCSV.java
         run: javac main/java/CSVParsingTest.java
       - name: Compile ReadCSV2.java
@@ -24,10 +24,10 @@ jobs:
       - name: Compile ReadCSV4.java
         run: javac main/java/CSVParsing4Test.java        
       - name: Run ReadCSV
-        run: java CSVParsingTest 
+        run: java main/java/CSVParsingTest 
       - name: Run ReadCSV2        
-        run: java CSVParsing2Test 
+        run: java main/java/CSVParsing2Test 
       - name: Run ReadCSV3
-        run: java CSVParsing3Test 
+        run: java main/java/CSVParsing3Test 
       - name: Run ReadCSV4        
-        run: java CSVParsing4Test 
+        run: java main/java/CSVParsing4Test 
