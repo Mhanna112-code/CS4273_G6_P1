@@ -13,19 +13,21 @@ jobs:
           java-version: 1.8
       - name: maven build
         run: mvn -B package --file pom.xml
+      - name: compileCSVParser
+        run: javac CSVParsing.java
       - name: Compile ReadCSV.java
-        run: javac CSVParsingTest.java
+        run: javac main/java/CSVParsingTest.java
       - name: Compile ReadCSV2.java
-        run: javac CSVParsing2Test.java
+        run: javac main/java/CSVParsing2Test.java
       - name: Compile ReadCSV3.java
-        run: javac CSVParsing3Test.java
+        run: javac main/java/CSVParsing3Test.java
       - name: Compile ReadCSV4.java
-        run: javac CSVParsing4Test.java        
+        run: javac main/java/CSVParsing4Test.java        
       - name: Run ReadCSV
-        run: java CSVParsingTest test1.csv
+        run: java CSVParsingTest 
       - name: Run ReadCSV2        
-        run: java CSVParsing2Test test2.csv
+        run: java CSVParsing2Test 
       - name: Run ReadCSV3
-        run: java CSVParsing3Test test3.csv
+        run: java CSVParsing3Test 
       - name: Run ReadCSV4        
-        run: java CSVParsing4Test test4.csv
+        run: java CSVParsing4Test 
