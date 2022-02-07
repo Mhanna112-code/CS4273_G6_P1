@@ -1,3 +1,7 @@
+import static org.junit.Assert.assertEuqals;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
 import main.java.CSVParsing.java
 
 class CSVParsingTest{
