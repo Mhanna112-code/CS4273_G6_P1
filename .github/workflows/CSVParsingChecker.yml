@@ -11,8 +11,21 @@ jobs:
         uses: actions/setup-java@v1
         with: 
           java-version: 1.8
-        
-      - name: compiler testcase 1
+      - name: maven build
+        run: mvn -B package --file pom.xml
+      - name: Compile ReadCSV.java
         run: javac CSVParsingTest.java
-      - name: run testcase 1
-        run: java CSVParsingTest
+      - name: Compile ReadCSV2.java
+        run: javac CSVParsing2Test.java
+      - name: Compile ReadCSV3.java
+        run: javac CSVParsing3Test.java
+      - name: Compile ReadCSV4.java
+        run: javac CSVParsing4Test.java        
+      - name: Run ReadCSV
+        run: java CSVParsingTest test1.csv
+      - name: Run ReadCSV2        
+        run: java CSVParsing2Test test2.csv
+      - name: Run ReadCSV3
+        run: java CSVParsing3Test test3.csv
+      - name: Run ReadCSV4        
+        run: java CSVParsing4Test test4.csv
